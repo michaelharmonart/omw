@@ -294,10 +294,7 @@ class MessageAttribute(Attribute):
     ) -> list[str]:
         if not cmds.objExists(self.attr_path):
             return []
-        return (
-            cmds.listConnections(self.attr_path, source=source, destination=destination)
-            or []
-        )
+        return cmds.listConnections(self.attr_path, source=source, destination=destination) or []
 
     @property
     def source_node(self) -> str | None:

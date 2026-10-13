@@ -40,19 +40,11 @@ class PoseInterpolatorDriverAttribute(Attribute):
 
         self.driver_matrix = MatrixAttribute(f"{attr_path}.driverMatrix")
         self.driver_orient = EulerRotationAttribute(f"{attr_path}.driverOrient")
-        self.driver_rotate_axis = EulerRotationAttribute(
-            f"{attr_path}.driverRotateAxis"
-        )
-        self.driver_twist_axis = EnumAttribute(
-            f"{attr_path}.driverTwistAxis", UnsignedAxis
-        )
-        self.driver_rotate_order = EnumAttribute(
-            f"{attr_path}.driverRotateOrder", RotateOrder
-        )
+        self.driver_rotate_axis = EulerRotationAttribute(f"{attr_path}.driverRotateAxis")
+        self.driver_twist_axis = EnumAttribute(f"{attr_path}.driverTwistAxis", UnsignedAxis)
+        self.driver_rotate_order = EnumAttribute(f"{attr_path}.driverRotateOrder", RotateOrder)
         self.driver_euler_twist = BooleanAttribute(f"{attr_path}.driverEulerTwist")
-        self.driver_controller = ArrayAttribute(
-            f"{attr_path}.driverController", GenericAttribute
-        )
+        self.driver_controller = ArrayAttribute(f"{attr_path}.driverController", GenericAttribute)
 
 
 class PoseInterpolatorPoseControllerDataItemAttribute(Attribute):
@@ -91,21 +83,13 @@ class PoseInterpolatorPoseAttribute(Attribute):
     def __init__(self, attr_path: str) -> None:
         super().__init__(attr_path)
 
-        self.pose_rotation = ArrayAttribute(
-            f"{attr_path}.poseRotation", DoubleArrayAttribute
-        )
-        self.pose_translation = ArrayAttribute(
-            f"{attr_path}.poseTranslation", DoubleArrayAttribute
-        )
+        self.pose_rotation = ArrayAttribute(f"{attr_path}.poseRotation", DoubleArrayAttribute)
+        self.pose_translation = ArrayAttribute(f"{attr_path}.poseTranslation", DoubleArrayAttribute)
         self.pose_name = StringAttribute(f"{attr_path}.poseName")
         self.is_independent = BooleanAttribute(f"{attr_path}.isIndependent")
         self.pose_rotation_falloff = FloatAttribute(f"{attr_path}.poseRotationFalloff")
-        self.pose_translation_falloff = FloatAttribute(
-            f"{attr_path}.poseTranslationFalloff"
-        )
-        self.pose_type = EnumAttribute(
-            f"{attr_path}.poseType", PoseInterpolatorPoseType
-        )
+        self.pose_translation_falloff = FloatAttribute(f"{attr_path}.poseTranslationFalloff")
+        self.pose_type = EnumAttribute(f"{attr_path}.poseType", PoseInterpolatorPoseType)
         self.pose_falloff = FloatAttribute(f"{attr_path}.poseFalloff")
         self.is_enabled = BooleanAttribute(f"{attr_path}.isEnabled")
         self.pose_controller_data = ArrayAttribute(

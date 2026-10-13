@@ -75,9 +75,7 @@ class ComposeMatrixNode(Node):
 
     def _setup_attributes(self) -> None:
 
-        self.input_rotate_order = EnumAttribute(
-            f"{self.name}.inputRotateOrder", RotateOrder
-        )
+        self.input_rotate_order = EnumAttribute(f"{self.name}.inputRotateOrder", RotateOrder)
         self.input_quat = QuatAttribute(f"{self.name}.inputQuat")
         self.input_rotate = Vector3Attribute(f"{self.name}.inputRotate")
         self.input_scale = Vector3Attribute(f"{self.name}.inputScale")
@@ -96,9 +94,7 @@ class DecomposeMatrixNode(Node):
 
     def _setup_attributes(self) -> None:
         self.input_matrix = MatrixAttribute(f"{self.name}.inputMatrix")
-        self.input_rotate_order = EnumAttribute(
-            f"{self.name}.inputRotateOrder", RotateOrder
-        )
+        self.input_rotate_order = EnumAttribute(f"{self.name}.inputRotateOrder", RotateOrder)
         self.output_quat = QuatAttribute(f"{self.name}.outputQuat")
         self.output_rotate = Vector3Attribute(f"{self.name}.outputRotate")
         self.output_scale = Vector3Attribute(f"{self.name}.outputScale")

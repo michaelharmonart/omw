@@ -32,9 +32,7 @@ class BlendShapeInbetweenInfoAttribute(Attribute):
             f"{attr_path}.inbetweenTargetType", BlendShapeInbetweenTargetType
         )
         self.inbetween_target_name = StringAttribute(f"{attr_path}.inbetweenTargetName")
-        self.interpolation = EnumAttribute(
-            f"{attr_path}.interpolation", BlendShapeInterpolation
-        )
+        self.interpolation = EnumAttribute(f"{attr_path}.interpolation", BlendShapeInterpolation)
         self.interpolation_curve = ArrayAttribute(
             f"{attr_path}.interpolationCurve", Vector2Attribute
         )
@@ -47,9 +45,7 @@ class BlendShapeInbetweenInfoGroupAttribute(Attribute):
     def __init__(self, attr_path: str) -> None:
         super().__init__(attr_path)
 
-        self.inbetween_info = BlendShapeInbetweenInfoAttribute(
-            f"{attr_path}.inbetweenInfoGroup"
-        )
+        self.inbetween_info = BlendShapeInbetweenInfoAttribute(f"{attr_path}.inbetweenInfoGroup")
 
 
 class BlendShapeInputTargetAttribute(Attribute):
@@ -70,16 +66,12 @@ class BlendShapeInputTargetAttribute(Attribute):
         )
         self.paint_target_index = IntegerAttribute(f"{attr_path}.paintTargetIndex")
         self.sculpt_target_index = IntegerAttribute(f"{attr_path}.sculptTargetIndex")
-        self.sculpt_inbetween_weight = ScalarAttribute(
-            f"{attr_path}.sculptInbetweenWeight"
-        )
+        self.sculpt_inbetween_weight = ScalarAttribute(f"{attr_path}.sculptInbetweenWeight")
         self.sculpt_target_tweaks = ArrayAttribute(
             f"{attr_path}.sculptTargetTweaks", BlendShapeSculptTargetTweaksAttribute
         )
         self.deform_matrix = MatrixArrayAttribute(f"{attr_path}.deformMatrix")
-        self.deform_matrix_modified = BooleanAttribute(
-            f"{attr_path}.deformMatrixModified"
-        )
+        self.deform_matrix_modified = BooleanAttribute(f"{attr_path}.deformMatrixModified")
 
 
 class BlendShapeInputTargetGroupAttribute(Attribute):
@@ -91,9 +83,7 @@ class BlendShapeInputTargetGroupAttribute(Attribute):
         self.input_target_item = ArrayAttribute(
             f"{attr_path}.inputTargetItem", BlendShapeInputTargetItemAttribute
         )
-        self.target_weights = ArrayAttribute(
-            f"{attr_path}.targetWeights", ScalarAttribute
-        )
+        self.target_weights = ArrayAttribute(f"{attr_path}.targetWeights", ScalarAttribute)
         self.normalization_id = IntegerAttribute(f"{attr_path}.normalizationId")
         self.post_deformers_mode = EnumAttribute(
             f"{attr_path}.postDeformersMode", BlendShapePostDeformationOrder
@@ -116,9 +106,7 @@ class BlendShapeInputTargetItemAttribute(Attribute):
             f"{attr_path}.inputRelativeComponentsTarget"
         )
         self.input_points_target = PointArrayAttribute(f"{attr_path}.inputPointsTarget")
-        self.input_components_target = ComponentListAttribute(
-            f"{attr_path}.inputComponentsTarget"
-        )
+        self.input_components_target = ComponentListAttribute(f"{attr_path}.inputComponentsTarget")
 
 
 class BlendShapeNormalizationGroupAttribute(Attribute):
@@ -127,9 +115,7 @@ class BlendShapeNormalizationGroupAttribute(Attribute):
     def __init__(self, attr_path: str) -> None:
         super().__init__(attr_path)
 
-        self.normalization_use_weights = BooleanAttribute(
-            f"{attr_path}.normalizationUseWeights"
-        )
+        self.normalization_use_weights = BooleanAttribute(f"{attr_path}.normalizationUseWeights")
         self.normalization_weights = ArrayAttribute(
             f"{attr_path}.normalizationWeights", ScalarAttribute
         )
@@ -142,9 +128,7 @@ class BlendShapeSculptTargetTweaksAttribute(Attribute):
         super().__init__(attr_path)
 
         self.vertex = ArrayAttribute(f"{attr_path}.vertex", Vector3Attribute)
-        self.control_points = ArrayAttribute(
-            f"{attr_path}.controlPointe", Vector3Attribute
-        )
+        self.control_points = ArrayAttribute(f"{attr_path}.controlPointe", Vector3Attribute)
 
 
 class BlendShapeTargetDirectoryAttribute(Attribute):

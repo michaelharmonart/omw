@@ -199,9 +199,7 @@ class MultiplyDivideNode(Node):
     def _setup_attributes(self) -> None:
         self.input1 = Vector3Attribute(f"{self.name}.input1")
         self.input2 = Vector3Attribute(f"{self.name}.input2")
-        self.operation = EnumAttribute(
-            f"{self.name}.operation", MultiplyDivideOperation
-        )
+        self.operation = EnumAttribute(f"{self.name}.operation", MultiplyDivideOperation)
         self.output = Vector3Attribute(f"{self.name}.output")
 
 
@@ -233,9 +231,7 @@ class PlusMinusAverageNode(Node):
         self.output_3d = Vector3Attribute(f"{self.name}.output3D")
         self.output_2d = Vector2Attribute(f"{self.name}.output2D")
         self.output_1d = ScalarAttribute(f"{self.name}.output1D")
-        self.operation = EnumAttribute(
-            f"{self.name}.operation", PlusMinusAverageOperation
-        )
+        self.operation = EnumAttribute(f"{self.name}.operation", PlusMinusAverageOperation)
 
 
 class RemapValueNode(Node):

@@ -23,14 +23,10 @@ class PoseInterpolatorNode(Node):
         super().__init__(name)
 
     def _setup_attributes(self) -> None:
-        self.allow_negative_weights = BooleanAttribute(
-            f"{self.name}.allowNegativeWeights"
-        )
+        self.allow_negative_weights = BooleanAttribute(f"{self.name}.allowNegativeWeights")
         self.display_output = BooleanAttribute(f"{self.name}.displayOutput")
         self.display_spacing = DoubleAttribute(f"{self.name}.displaySpacing")
-        self.driver = ArrayAttribute(
-            f"{self.name}.driver", PoseInterpolatorDriverAttribute
-        )
+        self.driver = ArrayAttribute(f"{self.name}.driver", PoseInterpolatorDriverAttribute)
         self.enable_rotation = BooleanAttribute(f"{self.name}.enableRotation")
         self.enable_translation = BooleanAttribute(f"{self.name}.enableTranslation")
         self.interpolation = EnumAttribute(

@@ -49,9 +49,7 @@ class CurveInfoNode(Node):
     def _setup_attributes(self) -> None:
         self.input_curve = NurbsCurveAttribute(f"{self.name}.inputCurve")
         self.arc_length = ScalarAttribute(f"{self.name}.arcLength")
-        self.control_points = ArrayAttribute(
-            f"{self.name}.controlPoints", ScalarAttribute
-        )
+        self.control_points = ArrayAttribute(f"{self.name}.controlPoints", ScalarAttribute)
         self.knots = ArrayAttribute(f"{self.name}.knots", ScalarAttribute)
         self.weights = ArrayAttribute(f"{self.name}.weights", ScalarAttribute)
 
@@ -73,9 +71,7 @@ class MotionPathNode(Node):
         self.fraction_mode = BooleanAttribute(f"{self.name}.fractionMode")
 
         self.follow = BooleanAttribute(f"{self.name}.follow")
-        self.world_up_type = EnumAttribute(
-            f"{self.name}.worldUpType", MotionPathWorldUpType
-        )
+        self.world_up_type = EnumAttribute(f"{self.name}.worldUpType", MotionPathWorldUpType)
         self.world_up_vector = Vector3Attribute(f"{self.name}.worldUpVector")
         self.world_up_matrix = MatrixAttribute(f"{self.name}.worldUpMatrix")
         self.inverse_up = BooleanAttribute(f"{self.name}.inverseUp")
@@ -112,19 +108,11 @@ class UvPinNode(Node):
         self.tangent_axis = EnumAttribute(f"{self.name}.tangentAxis", Axis)
         self.uv_set_name = StringAttribute(f"{self.name}.uvSetName")
         self.normalized_isoparms = BooleanAttribute(f"{self.name}.normalizedIsoParms")
-        self.normal_override = EnumAttribute(
-            f"{self.name}.normalOverride", UvPinNormalOverride
-        )
+        self.normal_override = EnumAttribute(f"{self.name}.normalOverride", UvPinNormalOverride)
         self.relative_space_mode = EnumAttribute(
             f"{self.name}.relativeSpaceMode", UvPinRelativeSpaceMode
         )
         self.relative_space_matrix = MatrixAttribute(f"{self.name}.relativeSpaceMatrix")
-        self.coordinate = ArrayAttribute(
-            f"{self.name}.coordinate", UvPinCoordinateAttribute
-        )
-        self.output_matrix = ArrayAttribute(
-            f"{self.name}.outputMatrix", MatrixAttribute
-        )
-        self.output_translate = ArrayAttribute(
-            f"{self.name}.outputTranslate", Vector3Attribute
-        )
+        self.coordinate = ArrayAttribute(f"{self.name}.coordinate", UvPinCoordinateAttribute)
+        self.output_matrix = ArrayAttribute(f"{self.name}.outputMatrix", MatrixAttribute)
+        self.output_translate = ArrayAttribute(f"{self.name}.outputTranslate", Vector3Attribute)

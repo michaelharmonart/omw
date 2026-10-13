@@ -20,9 +20,7 @@ class EulerToQuatNode(Node):
 
     def _setup_attributes(self) -> None:
         self.output_quat = QuatAttribute(f"{self.name}.outputQuat")
-        self.input_rotate_order = EnumAttribute(
-            f"{self.name}.inputRotateOrder", RotateOrder
-        )
+        self.input_rotate_order = EnumAttribute(f"{self.name}.inputRotateOrder", RotateOrder)
         self.input_rotate = Vector3Attribute(f"{self.name}.inputRotate")
 
 
@@ -95,7 +93,5 @@ class QuatToEulerNode(Node):
 
     def _setup_attributes(self) -> None:
         self.input_quat = QuatAttribute(f"{self.name}.inputQuat")
-        self.input_rotate_order = EnumAttribute(
-            f"{self.name}.inputRotateOrder", RotateOrder
-        )
+        self.input_rotate_order = EnumAttribute(f"{self.name}.inputRotateOrder", RotateOrder)
         self.output_rotate = Vector3Attribute(f"{self.name}.outputRotate")
