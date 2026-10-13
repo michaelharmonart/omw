@@ -4,7 +4,7 @@ from typing import ClassVar, Self
 from maya import cmds
 
 from omw.attribute import MessageAttribute
-from omw.utils import ensure_plugin_loaded
+from omw.plugin import ensure_plugin_loaded
 from omw.version import MAYA_API_VERSION, TARGET_API_VERSION
 
 
