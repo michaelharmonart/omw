@@ -14,7 +14,7 @@ requires = ["uv_build>=0.10.4,<0.11.0"]
 build-backend = "uv_build"
 
 [dependency-groups]
-dev = [
+lint = [
     "maya-stubs>=0.4.2",
     "ruff>=0.17.0",
     "ty>=0.0.86",
