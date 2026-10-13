@@ -1,6 +1,6 @@
 [project]
 name = "omw"
-version = "0.0.1"
+version = "0.0.2"
 description = "Open Maya Wrapper: An egornomic and typed Python API for Maya"
 readme = "README.md"
 authors = [

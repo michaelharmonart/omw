@@ -13,11 +13,11 @@ wheels = [
 
 [[package]]
 name = "omw"
-version = "0.0.1"
+version = "0.0.2"
 source = { editable = "." }
 
 [package.dev-dependencies]
-dev = [
+lint = [
     { name = "maya-stubs" },
     { name = "ruff" },
     { name = "ty" },
@@ -26,7 +26,7 @@ dev = [
 [package.metadata]
 
 [package.metadata.requires-dev]
-dev = [
+lint = [
     { name = "maya-stubs", specifier = ">=0.4.2" },
     { name = "ruff", specifier = ">=0.17.0" },
     { name = "ty", specifier = ">=0.0.86" },
