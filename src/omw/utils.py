@@ -43,8 +43,8 @@ def list_attribute_origins(node: str) -> None:
     # Root-first chain, then the node's own type last.
     type_chain: list[str] = [*cmds.nodeType(node, inherited=True), node_type]  # type: ignore
 
-    print(f"\n{node} ({node_type})")  # noqa
-    print("=" * 80)  # noqa
+    print(f"\n{node} ({node_type})")  # ruff: ignore[print]
+    print("=" * 80)  # ruff: ignore[print]
 
     seen: set[str] = set()
     pending: list[str] = []  # types attributeInfo can't resolve
@@ -65,10 +65,10 @@ def list_attribute_origins(node: str) -> None:
         if not new_attrs:
             continue
 
-        print(f"\nLevel {level}: {label}")  # noqa
-        print("-" * 80)  # noqa
+        print(f"\nLevel {level}: {label}")  # ruff: ignore[print]
+        print("-" * 80)  # ruff: ignore[print]
         for attr in new_attrs:
-            print(f"{attr:<40} {type_name}")  # noqa
+            print(f"{attr:<40} {type_name}")  # ruff: ignore[print]
 
 
 def get_dag_path(node: str | Node) -> MDagPath:

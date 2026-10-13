@@ -43,4 +43,4 @@ extend-select = [
 "RUF"
 ]
 
-ignore = ["E501"]
+ignore = ["line-too-long"]
