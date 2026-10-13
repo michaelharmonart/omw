@@ -17,7 +17,7 @@ result = MultiplyDivideNode.create("resultMultiply")
 
 
 source.input1.x.set(2.0)
-source.input2.x.set(3.0) =
+source.input2.x.set(3.0)
 
 result.input2.x.set(10.0)
 
