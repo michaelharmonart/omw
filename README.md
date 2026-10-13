@@ -1,6 +1,6 @@
 # Open Maya Wrapper
 
-An egornomic and typed Python API for Maya.
+An ergonomic and typed Python API for Maya.
 
 We love good IDE tools and LSP, and omw makes using the Maya API fun again!
 
