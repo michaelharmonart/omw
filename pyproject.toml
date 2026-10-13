@@ -16,4 +16,31 @@ build-backend = "uv_build"
 [dependency-groups]
 dev = [
     "maya-stubs>=0.4.2",
+    "ruff>=0.17.0",
+    "ty>=0.0.86",
 ]
+
+[tool.ruff]
+line-length = 100
+
+
+[tool.ruff.lint]
+preview = true
+extend-select = [
+"ANN",
+"B",
+"E",
+"FA",
+"I",
+"INP",
+"N",
+"PTH",
+"SIM",
+"T20",
+"TID",
+"UP",
+"F",
+"RUF"
+]
+
+ignore = ["E501"]
