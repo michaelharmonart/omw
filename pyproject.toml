@@ -19,6 +19,13 @@ lint = [
     "ruff>=0.17.0",
     "ty>=0.0.86",
 ]
+debug = [ "debugpy>=1.8.19" ]
+
+[[dependency-groups.dev]]
+include-group = "lint"
+
+[[dependency-groups.dev]]
+include-group = "debug"
 
 [tool.ruff]
 line-length = 100
